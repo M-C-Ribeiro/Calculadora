@@ -1,0 +1,90 @@
+* { /* configura todos os elementos da página */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 0.5s;
+}
+
+body {
+    font-family: sans-serif; /* define a fonte */
+    background-image: linear-gradient( to bottom, rgb(94, 102, 95),rgb(255, 255, 255)); /* define a cor de fundo */
+}
+
+.container { /* configura a div principal */
+    height: 100vh;
+    width: 100vw;
+    /* centralizar */
+    display: grid; 
+    place-items: center;
+}
+
+.calculadora { /* edita o plano de fundo da calculadora*/
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #000; 
+}
+
+#display { /* configura a tela da calculadora */
+    margin: 0 10px;
+    height: 150px;
+    width: auto;
+    max-width: 270px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    overflow-x: scroll; /* impede que saia da parte principal da calculadora */
+    /* alinhamento */
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    
+  }
+
+#display::-webkit-scrollbar { /* bloqueia a barra de rolagem da tela da calculadora*/
+    display: block;
+    height: 3px;
+}
+
+button { /* configurações para todos os botões*/
+    height: 60px;
+    width: 60px;
+    border: 0;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 20px;
+    transition: all 200ms ease; /* configura os efeitos de transição*/
+}
+
+button:hover { /* transição quando coloca mouse sobre botão*/
+    transform: scale(1.1);
+}
+
+.calculadora #display { /* altera cor do texto */
+    color: #f8fafb; 
+}
+
+.calculadora button {  /* configura a borda dos botões como redonda */
+    border-radius: 2em;
+}
+
+.calculadora button#limpar { /* configurações especiais para o botão limpar */
+    background-color: #e70d0daf;
+    color: #37a9bd;
+}
+
+.calculadora button.btn-numero { /* configurações especiais para os botões de números */
+    background-color: #1c7fad;
+    color: #f8fafb;
+}
+
+.calculadora button.btn-operador { /* configurações especiais para os botões de operadores */
+    background-color: #5a5061;
+    color: #000000;
+}
+
+.calculadora button.btn-igual { /* configurações especiais para o botão igual */
+    background-color: #115a16;
+    color: #ffffff;
+}
